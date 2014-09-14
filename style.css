@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin: .5em 0 1cm;
+}
+
+#grid {
+    margin: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+}
+
+    #grid td {
+        border: 1px solid gray;
+    }
+
+    @-webkit-keyframes birth {
+        50% {
+            box-shadow: 0 0 0 99px green inset;
+        }
+    }
+
+    @keyframes birth {
+        50% {
+            box-shadow: 0 0 0 99px green inset;
+        }
+    }
+
+    #grid input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 0;
+
+        background: white;
+
+    }
+
+        #grid input[type="checkbox"]:checked {
+            background: black;
+            box-shadow: 0 0 0 99px, black, inset;
+            -webkit-animation: birth .5s;
+            animation: birth 1s;
+    }
+
+button,
+    .autoplaylabel {
+    padding: .4em .6em;
+    background: yellowgreen;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3em;
+    box-shadow: 0 1px 0 hsla(0, 0%, 100%, .7) inset, 0 .15em .1em -.1em rgba(0, 0, 0, .3);
+    background: linear-gradient(hsla(0, 0%, 100%, .3), hsla(0, 0%, 100%, 0)) hsl(88, 80%, 35%);
+    font: inherit;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 -.05 05em rgba(0,0,0, .3);
+    outline: none;
+    cursor: pointer;
+}
+
+.autoplaystoplabel,
+    #clearButton {
+    background: linear-gradient(hsla(0, 0%, 100%, .3), hsla(0, 0%, 100%, 0)) darkred;
+}
+
+button:enabled:active,
+    .autoplaylabel:active{
+    background-image: none;
+    box-shadow: 0 .1em .3em rgba(0,0,0, .5) inset;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: hsl(80, 20%, 40%);
+}
+
+#autoplay {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
